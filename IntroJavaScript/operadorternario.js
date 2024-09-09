@@ -4,8 +4,7 @@ let resultado = "";
 
 let preco = 50;
 
-if(preco < 40)
-{
+if (preco < 40) {
 
     resultado = "livro barato";
 

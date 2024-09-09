@@ -1,5 +1,5 @@
 // antes da ES6
-function ola(){
+function ola() {
 
     console.log('Criando uma funcao antes da ES6')
 
@@ -15,15 +15,14 @@ const ola2 = () => {
 
 ola2();
 
-function somar(n1, n2){
+function somar(n1, n2) {
     return n1 + n2;
 }
 
-console.log(somar(2,3))
+console.log(somar(2, 3))
 
-const somar2 = (n1,n2) => 
-{
-    return n1+ n2;
+const somar2 = (n1, n2) => {
+    return n1 + n2;
 }
 
-console.log(somar2(6,4));
+console.log(somar2(6, 4));
