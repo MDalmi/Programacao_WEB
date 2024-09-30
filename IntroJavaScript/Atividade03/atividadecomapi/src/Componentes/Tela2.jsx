@@ -1,38 +1,40 @@
 import { useContext } from "react";
 import AppContext from "../AppContext";
+import "./Telas.css";
 
 
-function Tela2() {
+export default function Tela2() {
 
-    const { nome, setNome, telefone, setTelefone,
-        horas, setHoras, valorhora, setValorHora, calculaSalario } = useContext(AppContext);
+    const { horas, setHoras, valorhora, setValorHora, calculaINSS } = useContext(AppContext);
 
     return (
         <>
-            <div>
-                <h2>Informe os detalhes do trabalho:</h2>
-                <label>
-                    Valor da Hora:
-                    <input
-                        type="number"
-                        value={valorhora}
-                        onChange={(e) => setValorHora(e.target.value)}
-                    />
-                </label>
+            <div className="container">
+                <h2>Dados do Salario/Hora</h2>
+                <div className="form-group">
+                    <label>
+                        Valor da Hora
+                        <input
+                            type="number"
+                            value={valorhora}
+                            onChange={(e) => setValorHora(e.target.value)}
+                        />
+                    </label>
+                </div>
                 <br />
-                <label>
-                    Horas Trabalhadas:
-                    <input
-                        type="number"
-                        value={horas}
-                        onChange={(e) => setHoras(e.target.value)}
-                    />
-                </label>
+                <div className="form-group">
+                    <label>
+                        Horas Trabalhadas
+                        <input
+                            type="number"
+                            value={horas}
+                            onChange={(e) => setHoras(e.target.value)}
+                        />
+                    </label>
+                </div>
                 <br />
-                <button onClick={concluir}>Concluir</button>
+                <button onClick={() => calculaINSS()}>Concluir</button>
             </div>
         </>
     )
 }
-
-export default Tela2;
