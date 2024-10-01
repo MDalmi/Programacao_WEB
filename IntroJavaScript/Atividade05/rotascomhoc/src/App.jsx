@@ -6,8 +6,8 @@ import MenuPrivado from "./MenuPrivado";
 import MenuPublico from "./MenuPublico";
 import Login from "./Login";
 import Tela1 from "./Tela1";
-
-
+import Tela2 from "./Tela2";
+import Tela3 from "./Tela3";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +47,14 @@ const router = createBrowserRouter([
       {
         path : "tela1",
         element : <Tela1/>
+      },
+      {
+        path : "tela2",
+        element : <Tela2/>
+      },
+      {
+        path : "tela3",
+        element : <Tela3/>
       }
     ]
   }

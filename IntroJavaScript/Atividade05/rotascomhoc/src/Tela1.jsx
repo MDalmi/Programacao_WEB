@@ -9,6 +9,10 @@ export default function Tela1() {
     const [telefone, setTelefone] = useState("");
     const navigate = useNavigate();
 
+    const handleNavigate = () => {
+        navigate('/privado/tela2', { state: { nome, telefone } });
+      };
+
     return (
         <>
             <div className="container">
@@ -23,9 +27,7 @@ export default function Tela1() {
                     <input type="text" value={telefone}
                         onChange={e => setTelefone(e.target.value)} />
                 </div>
-                <button onClick={() => {
-                            navigate('/tela2');
-                        }}>Avançar</button>
+                <button onClick={handleNavigate}>Avançar</button>
                
                 {/*Avancar tela dois*/}
             </div>

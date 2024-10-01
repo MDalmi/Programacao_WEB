@@ -38,6 +38,12 @@
 }
 
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 05px; /* Ajuste de largura para o form */
+}
 
 button {
   background-color: #4CAF50;

@@ -21,7 +21,9 @@ const MenuPrivado = () => {
                             className="nav-link active" >
                                 {localStorage.getItem("usuario")} - Logout
                                 </NavLink>
-                                <NavLink exact="true" to="tela1" className="nav-link active">Tela 1</NavLink>
+                                <NavLink exact="true" to="tela1" className="nav-link active">Tela da Atividade</NavLink>
+                                 {/*<NavLink exact="true" to="tela2" className="nav-link active">Tela 2</NavLink>
+                                <NavLink exact="true" to="tela3" className="nav-link active">Tela 3</NavLink> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
