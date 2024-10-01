@@ -15,13 +15,12 @@ const MenuPrivado = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink exact="true" to="/privado" className="nav-link active">HOME</NavLink> 
                             <NavLink exact="true" to="usuario" className="nav-link active">Usuario</NavLink>
                             <NavLink exact="true" to="login" 
                             className="nav-link active" >
                                 {localStorage.getItem("usuario")} - Logout
                                 </NavLink>
-                                <NavLink exact="true" to="tela1" className="nav-link active">Tela da Atividade</NavLink>
+                                <NavLink exact="true" to="tela1" className="nav-link active">Menu da Atividade</NavLink>
                                  {/*<NavLink exact="true" to="tela2" className="nav-link active">Tela 2</NavLink>
                                 <NavLink exact="true" to="tela3" className="nav-link active">Tela 3</NavLink> */}
                         </Nav>

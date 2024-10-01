@@ -11,7 +11,16 @@ export default function Tela1() {
 
     const handleNavigate = () => {
         navigate('/privado/tela2', { state: { nome, telefone } });
-      };
+    };
+
+    const handleTelefoneChange = (e) => {
+        const valor = e.target.value;
+
+        // Verifica se o valor contém apenas números e tem no máximo 9 caracteres
+        if (/^\d*$/.test(valor) && valor.length <= 9) {
+            setTelefone(valor);
+        }
+    };
 
     return (
         <>
@@ -24,12 +33,13 @@ export default function Tela1() {
                 </div>
                 <div className="form-group">
                     <label>Telefone</label>
-                    <input type="text" value={telefone}
-                        onChange={e => setTelefone(e.target.value)} />
+                    <input
+                        type="text"
+                        value={telefone}
+                        onChange={handleTelefoneChange}
+                    />
                 </div>
                 <button onClick={handleNavigate}>Avançar</button>
-               
-                {/*Avancar tela dois*/}
             </div>
         </>
 

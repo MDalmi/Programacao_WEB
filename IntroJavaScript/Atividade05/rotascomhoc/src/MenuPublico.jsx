@@ -15,7 +15,6 @@ const MenuPublico = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink exact="true" to="/" className="nav-link active">HOME</NavLink> 
                             <NavLink exact="true" to="usuario" className="nav-link active">Usuario</NavLink>
                             <NavLink exact="true" to="login" className="nav-link active">Logout</NavLink>
                             

@@ -8,14 +8,14 @@ const Login = () => {
     const isAuth = !!localStorage.getItem("usuario");
 
     return (
-        <>
+        <> <div style={{textAlign : "center", marginTop : "50px"}}>
             {
                 !isAuth
                     ?
                     (
                         <>
                             <div>
-                                <label>Usuário</label>
+                                <label style={{padding : "10px"}}>Usuário</label>
                                 <input type="text" value={usuario}
                                     onChange={e => setUsuario(e.target.value)} />
                             </div>
@@ -34,6 +34,7 @@ const Login = () => {
                             Logout</button>
                     )
             }
+        </div>
         </>
     )
 

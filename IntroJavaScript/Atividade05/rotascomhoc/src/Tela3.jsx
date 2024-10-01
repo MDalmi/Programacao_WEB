@@ -1,26 +1,19 @@
-/*
-Após se clicar em concluir deve ser exibida uma tela com o
-nome e telefone da pessoa, seu salário bruto, o valor pago de INSS e o valor do
-salário líquido.
-*/
+import InputMask from 'react-input-mask';
 import { useLocation } from 'react-router-dom';
 
 export default function Tela3() {
-
     const location = useLocation();
-    const { nome, telefone, salariototal, salarioliquido, valorINSS } = location.state || {};
-
-    
+    const { nome, telefone, salario, salarioliq, valorPagINSS } = location.state || {};
 
     return (
         <>
-            <div className="container">
+            <div className="container" style={{marginTop : "50px"}}>
                 <h2>Dados da Trabalho Calculados</h2>
                 <div className="form-group">
                     <label>
                         Nome
                         <input
-                            value={nome} readOnly
+                            value={nome || ''} readOnly
                         />
                     </label>
                     <br />
@@ -28,8 +21,10 @@ export default function Tela3() {
                 <div className="form-group">
                     <label>
                         Telefone
-                        <input
-                            value={telefone} readOnly
+                        <InputMask
+                            mask="(54) 9 9999-9999"
+                            value={telefone || ''}
+                            readOnly
                         />
                     </label>
                     <br />
@@ -38,7 +33,7 @@ export default function Tela3() {
                     <label>
                         Salário Bruto
                         <input
-                            type="double" value={salariototal} readOnly
+                            type="text" value={salario || ''} readOnly
                         />
                     </label>
                     <br />
@@ -47,7 +42,7 @@ export default function Tela3() {
                     <label>
                         Valor Pago ao INSS
                         <input
-                            type="number" value={salarioliquido} readOnly
+                            type="text" value={valorPagINSS || ''} readOnly
                         />
                     </label>
                     <br />
@@ -56,12 +51,12 @@ export default function Tela3() {
                     <label>
                         Salário Líquido
                         <input
-                            value={valorINSS} readOnly
+                            type="text" value={salarioliq || ''} readOnly
                         />
                     </label>
                     <br />
                 </div>
             </div>
         </>
-    )
+    );
 }
