@@ -1,13 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import Ola from './ola';
-import Livros from './Livros';
+import Calculos from "./Calculos";
 
 function App() {
   return (
-    <div className="App">
-      <Ola></Ola>
-      <Livros />
+    <div >
+      <Calculos/>
     </div>
   );
 }

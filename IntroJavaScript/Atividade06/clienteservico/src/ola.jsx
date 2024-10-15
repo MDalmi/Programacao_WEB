@@ -10,17 +10,13 @@ function Ola() {
             .then(json => setMensagem(json))
             .catch(err => setMensagem("Erro: " + err))
     }
-
     return (
         <>
-            <h1> Mensagem da API: {mensagem} </h1>
+            <h1>Mensagem da API: {mensagem}</h1>
             <br />
-            <button onClick={() => getOla()}>
-                Chamar API
-            </button>
+            <button onClick={() => getOla()}>Chamar a API</button>
         </>
     )
-
 }
 
-export default Ola
+export default Ola;
